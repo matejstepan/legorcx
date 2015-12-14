@@ -19,11 +19,13 @@ task main(){
 
 	while(true){
 		if (SENSOR_1==1){
-			OnFwd(OUT_A);
+			stop jedDopredu;
+
+			OnFwd(OUT_A); //jed dozadu
 			Wait(50);
 			Off(OUT_A);
 
-			stop jedDopredu;
+			Wait(50); //cekani pro jistotu 
 			start volejSos;
 			start blikejSos;
 		}
@@ -38,7 +40,6 @@ task main(){
  }
 
  task volejSos(){
- 	Wait(50);
  	repeat(3){
  		PlayTone(440,KRATKA); Wait(2*KRATKA);
  		
@@ -56,7 +57,6 @@ task main(){
  }
 
  task blikejSos(){
- 	Wait(50);
  	repeat(3){
  		On(OUT_C); Wait(KRATKA);
  		Off(OUT_C); Wait(KRATKA);
