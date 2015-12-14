@@ -1,4 +1,4 @@
 #Moje pokusy s Lego minstorm RCX
 
 Našli jsme starou stavebnici a hrajeme si.
-![Robot](imgs/lego-robot-1.jpg)
+![Robot](https://raw.githubusercontent.com/matejstepan/legorcx/master/imgs/lego-robot-1.jpg width="600")
