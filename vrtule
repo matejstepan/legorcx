@@ -1,0 +1,22 @@
+//v. se toci 20s  vrtule stoji svetla blikaji v. se toci sv. nesviti
+
+
+task main(){
+
+
+		int pauza;
+		pauza=50;
+repeat(10){
+		          
+		         OnFwd(OUT_B);  //vrtule
+		         Wait(pauza);
+		         Off(OUT_B);
+
+
+		repeat(2){
+		         OnFwd(OUT_AC);  //blikani
+		         Wait(pauza);
+		         Off(OUT_AC);
+		         Wait(pauza);
+
+}	}		}	     

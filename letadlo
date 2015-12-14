@@ -1,0 +1,21 @@
+//tocici se v. blikajici svetla
+
+task main(){  
+		int pauza;
+		OnFwd(OUT_B);//b-vrtule
+			
+		pauza=50;
+		          
+		         
+		repeat(20){
+		         OnFwd(OUT_AC);//blikani
+		         Wait(pauza);
+		         Float(OUT_AC);
+		         Wait(pauza);
+		         
+}	}		     
+
+
+
+
+                      
