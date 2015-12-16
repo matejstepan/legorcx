@@ -33,7 +33,7 @@ task main(){
  }
 
  task jedDopredu(){
- 	SetPower(OUT_A,3);
+ 	SetPower(OUT_A,6);
  	while(true){
  		OnRev(OUT_A); Wait(20);
  	}
@@ -73,6 +73,11 @@ task main(){
  		Off(OUT_C); Wait(KRATKA);
  		
  	}
+ 	while(true){
+		if (SENSOR_3==1){
 
- }
-	
+			OnRev(OUT_A); 
+	    	SetPower(OUT_A,8);
+	    }	
+	}			
+} 
