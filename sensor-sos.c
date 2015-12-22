@@ -13,7 +13,7 @@ task main(){
 	SetSensor(SENSOR_3,SENSOR_TOUCH);
 
 	//uvodni zvuk
-	PlaySound(3); Wait(100);
+	PlaySound(6); Wait(100);
 
 	start jedDopredu;
 
@@ -25,7 +25,7 @@ task main(){
 			Wait(50);
 			Off(OUT_A);
 
-			Wait(50); //cekani pro jistotu 
+			Wait(300); //cekani pro jistotu 
 			start volejSos;
 			start blikejSos;
 		}
@@ -33,7 +33,7 @@ task main(){
  }
 
  task jedDopredu(){
- 	SetPower(OUT_A,6);
+ 	SetPower(OUT_A,3);
  	while(true){
  		OnRev(OUT_A); Wait(20);
  	}
@@ -73,11 +73,6 @@ task main(){
  		Off(OUT_C); Wait(KRATKA);
  		
  	}
- 	while(true){
-		if (SENSOR_3==1){
 
-			OnRev(OUT_A); 
-	    	SetPower(OUT_A,8);
-	    }	
-	}			
-} 
+ }
+	
