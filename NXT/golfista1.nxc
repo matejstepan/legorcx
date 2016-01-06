@@ -1,0 +1,33 @@
+// GOLFISTA robot zapojeni
+// OUT_A je ruka
+
+#define HLASITE 40
+#define BLIZKO 10
+
+task main(){
+    SetSensorSound(IN_2);
+    SetSensorLowspeed(IN_4);
+    
+    while(true){
+       //cekame na pisknuti
+
+      while(SENSOR_2 <= HLASITE){}
+    
+      //naprah
+      RotateMotorEx(OUT_A, 30, -90,0, false, true);
+
+      //cekej dokud
+      while(SensorUS(IN_4) >= BLIZKO){}
+    
+      // a bum RANA
+      RotateMotorEx(OUT_A, 100, 180,0, false, true);
+      Wait(300);
+      RotateMotorEx(OUT_A, 50, -90,0, false, true);
+      
+      PlayFile("Hooray.rso");
+      Wait(200);
+   }
+}
+
+
+
