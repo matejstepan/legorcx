@@ -24,6 +24,7 @@ task main(){
     OnFwd(OUT_A+OUT_C);
     Wait(500);
     cukniLeva();
+    cukniLeva();								
     pravoVbok();
  repeat(10){
  	PlaySound(4);
